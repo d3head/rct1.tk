@@ -1,0 +1,75 @@
+<?
+$Tpl->tplHead();
+?>
+
+			<div id="header">
+
+				<div id="logo" class="logo float_left">
+					<a class="rct1" onclick="tab('about')">rct1.tk</a>
+				</div>
+				
+				<div class="menu float_right">
+					<span onclick="tab('upload')" title="картинку, например" class="link1 ltip link_active">загрузить</span>
+					<span onclick="tab('urler')" title="ссылку" class="link2 ltip">сократить</span>
+					<span onclick="tab('api')" title="для использования в сторонних приложениях" class="link2 ltip">api</span>
+				</div>
+			
+			</div>
+			
+			<div class="clrfix"></div>
+			
+			<div id="wrapper">
+			
+				<div class="upload">
+				
+					<span>Выберите файл или картинку: <span id="status"></span></span>
+					
+					<div class="process">
+						<div id="upload" class="up_button">Выберите файл</div>
+						<ul id="files" ></ul>
+					</div>
+					
+				</div>
+				
+				<div class="urler" style="display:none;">
+				
+					<span>Введите URL для сокращения: </span><br />
+					
+					<div class="process">
+						<form action='/api/url/add/' method='post' id='urler'>
+							<input type="text" class="url" id="url" autocomplete="off" placeholder="например, http://yandex.ru" autofocus="" />
+							<input type="submit" class="sub_url" value="→" />
+						</form>
+					</div>							
+					
+				</div>
+				
+				<div class="api" style="display:none;">
+					API сервиса в разработке
+				</div>
+				
+				<div class="about" style="display:none;">
+				
+					<span>О сервисе</span>
+					
+					<p>
+						rct1.tk — это бесплатное хранилище для ваших картинок и архивов, не превышающих по обьему 15 мегабайт.<br /> А еще, здесь вы можете сократить ссылку любой длины.
+					</p>
+					
+					<span>Контакты</span>
+					
+					<p>
+						Есть идея? Пишите на электропочту: <a href="mailto:i@rcount.ru" title="">i@rcount.ru</a>
+					</p>
+					
+				</div>
+				
+			</div>
+			
+			<div class="clrfix"></div>
+			
+			<div class="footer_padding"></div>
+			
+<?
+$Tpl->tplFoot();
+?>
